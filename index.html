@@ -1,0 +1,438 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahil Belurkar - DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+      <div class="logo">Sahil Belurkar</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="typing-text">Hello, I'm Sahil Belurkar</h1>
+        <h2>DevOps Engineer</h2>
+        <p class="fade-in">Automating the future, one pipeline at a time</p>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am a passionate and aspiring DevOps engineer with over a year and
+            a half of hands-on experience exploring cloud infrastructure,
+            automation, and continuous integration/deployment pipelines. I have
+            worked extensively with tools like Jenkins, Docker, Kubernetes,
+            Ansible, and Terraform, while gaining a solid understanding of cloud
+            platforms like AWS. My focus has been on automating workflows,
+            managing infrastructure as code, and enhancing collaboration between
+            development and operations.
+          </p>
+        </div>
+        <div class="about-text">
+          <p>
+            As a fresher, I am driven by a commitment to continuous learning and
+            innovation. Through self-initiated projects and practice, I aim to
+            build scalable, secure, and efficient systems while contributing to
+            real-world projects that push the boundaries of DevOps..
+          </p>
+        </div>
+        <div class="tech-stack">
+          <div class="tech-grid">
+            <!-- Cloud & Infrastructure -->
+            <div class="tech-category">
+              <h3>Cloud & Infrastructure</h3>
+              <div class="tech-items">
+                <span class="tech-item"><i class="fab fa-aws"></i> AWS</span>
+                <span class="tech-item"
+                  ><i class="fab fa-digital-ocean"></i> DigitalOcean</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-linux"></i> Linux</span
+                >
+              </div>
+            </div>
+
+            <!-- CI/CD & Containers -->
+            <div class="tech-category">
+              <h3>CI/CD & Containers</h3>
+              <div class="tech-items">
+                <span class="tech-item"
+                  ><i class="fab fa-docker"></i> Docker</span
+                >
+                <span class="tech-item"
+                  ><i class="fas fa-dharmachakra"></i> Kubernetes</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-jenkins"></i> Jenkins</span
+                >
+              </div>
+            </div>
+
+            <!-- Version Control & IaC -->
+            <div class="tech-category">
+              <h3>Version Control & IaC</h3>
+              <div class="tech-items">
+                <span class="tech-item"
+                  ><i class="fab fa-github"></i> GitHub</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-git-alt"></i> Git</span
+                >
+                <span class="tech-item"
+                  ><i class="fas fa-code-branch"></i> Terraform</span
+                >
+              </div>
+            </div>
+
+            <!-- Scripting & Tools -->
+            <div class="tech-category">
+              <h3>Scripting & Tools</h3>
+              <div class="tech-items">
+                <span class="tech-item"
+                  ><i class="fab fa-python"></i> Python</span
+                >
+                <span class="tech-item"
+                  ><i class="fab fa-js"></i> JavaScript</span
+                >
+                <span class="tech-item"
+                  ><i class="fas fa-terminal"></i> Bash</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <!-- Add this card to your project-grid in projects.html -->
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <i class="fas fa-infinity project-icon"></i>
+            <!-- Infinity symbol representing CI/CD -->
+            <h3>CI/CD Pipeline with GitOps</h3>
+          </div>
+          <p class="project-description">
+            Implemented a comprehensive CI/CD pipeline integrating GitOps
+            practices for automated build, test, and deployment workflows. The
+            solution ensures consistent deployments, infrastructure as code, and
+            automated quality checks through a robust toolchain.
+          </p>
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i> Automated build and test workflows
+                with Jenkins
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Code quality analysis with
+                SonarQube
+              </li>
+              <li>
+                <i class="fas fa-check"></i> GitOps-based deployments using Argo
+                CD
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Containerized applications with
+                Docker
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Kubernetes orchestration for
+                scalability
+              </li>
+            </ul>
+          </div>
+          <div class="project-workflow">
+            <h4>Pipeline Workflow:</h4>
+            <div class="workflow-steps">
+              <div class="workflow-step">
+                <i class="fas fa-code-branch"></i>
+                <span>Git Push</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+              <div class="workflow-step">
+                <i class="fab fa-jenkins"></i>
+                <span>Jenkins Build</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+              <div class="workflow-step">
+                <i class="fas fa-check-circle"></i>
+                <span>SonarQube</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+              <div class="workflow-step">
+                <i class="fab fa-docker"></i>
+                <span>Docker Build</span>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+              <div class="workflow-step">
+                <i class="fas fa-ship"></i>
+                <span>Argo CD</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span><i class="fab fa-jenkins"></i> Jenkins</span>
+            <span><i class="fab fa-docker"></i> Docker</span>
+            <span><i class="fas fa-code-branch"></i> SonarQube</span>
+            <span><i class="fas fa-ship"></i> Argo CD</span>
+            <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fas fa-coins project-icon"></i>
+              <h3>AWS Cost Optimization Automation</h3>
+            </div>
+            <p class="project-description">
+              Automated solution for identifying and removing stale EBS
+              snapshots using AWS Lambda and CloudWatch, resulting in
+              significant cost savings. The system automatically detects unused
+              snapshots and implements a cleanup process based on customizable
+              retention policies.
+            </p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  <i class="fas fa-check"></i> Automated snapshot lifecycle
+                  management
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> CloudWatch metrics and alerts
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Customizable retention policies
+                </li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span><i class="fab fa-aws"></i> Lambda</span>
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-chart-line"></i> CloudWatch</span>
+              <span><i class="fas fa-database"></i> EBS</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+   <!-- components/skills.html -->
+   <section id="skills" class="skills">
+       <h2 class="section-title">Skills & Expertise</h2>
+       <div class="skills-grid">
+           <!-- Programming & Development -->
+           <div class="skill-category">
+               <h3>Programming & Development</h3>
+               <div class="skill-items">
+                   <div class="skill-item">
+                       <i class="fab fa-java"></i>
+                       <span>Java</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-python"></i>
+                       <span>Python</span>
+                       <div class="skill-level" data-level="88"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-golang"></i>
+                       <span>Go</span>
+                       <div class="skill-level" data-level="80"></div>
+                   </div>
+               </div>
+               <div class="sub-category">
+                   <h4>Web Development</h4>
+                   <div class="skill-items">
+                       <div class="skill-item">
+                           <i class="fab fa-react"></i>
+                           <span>MERN Stack</span>
+                       </div>
+                       <div class="skill-item">
+                           <i class="fas fa-database"></i>
+                           <span>MySQL</span>
+                       </div>
+                       <div class="skill-item">
+                           <i class="fas fa-paper-plane"></i>
+                           <span>Postman</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+   
+           <!-- DevOps Tools -->
+           <div class="skill-category">
+               <h3>DevOps Tools</h3>
+               <div class="skill-items">
+                   <div class="skill-item">
+                       <i class="fab fa-aws"></i>
+                       <span>AWS</span>
+                       <div class="skill-level" data-level="90"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-docker"></i>
+                       <span>Docker</span>
+                       <div class="skill-level" data-level="88"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fas fa-dharmachakra"></i>
+                       <span>Kubernetes</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-jenkins"></i>
+                       <span>Jenkins</span>
+                       <div class="skill-level" data-level="88"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fas fa-cogs"></i>
+                       <span>Ansible</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-git-alt"></i>
+                       <span>Git</span>
+                       <div class="skill-level" data-level="90"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fas fa-box"></i>
+                       <span>Maven</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+               </div>
+           </div>
+   
+           <!-- Operating Systems -->
+           <div class="skill-category">
+               <h3>Operating Systems</h3>
+               <div class="skill-items">
+                   <div class="skill-item">
+                       <i class="fab fa-linux"></i>
+                       <span>Linux</span>
+                       <div class="skill-level" data-level="88"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-centos"></i>
+                       <span>CentOS</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fab fa-windows"></i>
+                       <span>Windows</span>
+                       <div class="skill-level" data-level="85"></div>
+                   </div>
+               </div>
+           </div>
+   
+           <!-- Soft Skills -->
+           <div class="skill-category">
+               <h3>Soft Skills</h3>
+               <div class="skill-items">
+                   <div class="skill-item">
+                       <i class="fas fa-puzzle-piece"></i>
+                       <span>Problem Solving</span>
+                       <div class="skill-level" data-level="90"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fas fa-comments"></i>
+                       <span>Communication</span>
+                       <div class="skill-level" data-level="88"></div>
+                   </div>
+                   <div class="skill-item">
+                       <i class="fas fa-users"></i>
+                       <span>Team Collaboration</span>
+                       <div class="skill-level" data-level="90"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        placeholder="Your Name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="Your Email"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        required 
+                        placeholder="Your Message"
+                        rows="5"
+                    ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <div class="loading-spinner" style="display: none;"></div>
+                </button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
