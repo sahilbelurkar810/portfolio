@@ -348,3 +348,46 @@ class ContactForm {
     this.messageDiv.textContent = "";
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const links = document.querySelectorAll(".nav-links a");
+
+  // Toggle menu
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  // Close menu when clicking a link
+  links.forEach((link) => {
+    link.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !hamburger.contains(e.target) &&
+      !navLinks.contains(e.target) &&
+      navLinks.classList.contains("active")
+    ) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  });
+});
