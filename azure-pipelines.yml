@@ -12,8 +12,21 @@ pool:
 steps:
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
     includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'
+
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: 'drop'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)/site.zip'
+
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'MyAzureConnection'  
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az storage blob upload-batch --destination '$web' --source '$(Build.SourcesDirectory)' --account-name '<YourStorageAccount>'
