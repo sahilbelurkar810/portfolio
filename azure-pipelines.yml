@@ -1,15 +1,13 @@
-# HTML
-# Archive your static HTML project and save it with the build record.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
+# Trigger on main branch
 trigger:
 - main
 
+# Use latest Ubuntu VM
 pool:
   vmImage: ubuntu-latest
 
 steps:
+# Archive the static HTML project
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)'
@@ -17,16 +15,44 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'
 
+# Publish the archive as a build artifact
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: 'drop'
     pathToPublish: '$(Build.ArtifactStagingDirectory)/site.zip'
 
-
+# Enable static website hosting (if not already enabled)
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'MyAzureConnection'  
+    azureSubscription: 'MyAzureConnection'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      az storage blob upload-batch --destination '$web' --source '$(Build.SourcesDirectory)' --account-name 'storageaccountsahil12'
+      echo "Enabling static website hosting..."
+      az storage blob service-properties update --account-name storageaccountsahil12 --static-website --index-document index.html
+
+# Ensure $web container exists
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'MyAzureConnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Checking if $web container exists..."
+      CONTAINER_EXISTS=$(az storage container exists --name '$web' --account-name 'storageaccountsahil12' --query exists)
+      if [ "$CONTAINER_EXISTS" == "false" ]; then
+        echo "Creating $web container..."
+        az storage container create --name '$web' --account-name 'storageaccountsahil12'
+      else
+        echo "$web container already exists."
+      fi
+
+# Deploy the site to Azure Storage
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'MyAzureConnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Deploying static site to Azure Storage..."
+      az storage blob upload-batch --destination '$web' --source '$(Build.SourcesDirectory)' --account-name 'storageaccountsahil12' --auth-mode login
