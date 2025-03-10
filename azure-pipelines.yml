@@ -24,7 +24,7 @@ steps:
 # Enable static website hosting (if not already enabled)
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'MyAzureConnection'
+    azureSubscription: 'storagemanager'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -34,7 +34,7 @@ steps:
 # Ensure $web container exists
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'MyAzureConnection'
+    azureSubscription: 'storagemanager'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -50,7 +50,7 @@ steps:
 # Deploy the site to Azure Storage
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'MyAzureConnection'
+    azureSubscription: 'storagemanager'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
