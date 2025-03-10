@@ -29,4 +29,4 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      az storage blob upload-batch --destination '$web' --source '$(Build.SourcesDirectory)' --account-name '<YourStorageAccount>'
+      az storage blob upload-batch --destination '$web' --source '$(Build.SourcesDirectory)' --account-name 'storageaccountsahil12'
